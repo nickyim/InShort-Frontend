@@ -1,0 +1,212 @@
+/* Fade In and Fade Out Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+.fadeIn {
+  animation: fadeIn 1s forwards;
+}
+
+.fadeOut {
+  animation: fadeOut 1s forwards;
+}
+
+/* Container for the entire page */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 100vh;
+  background: 
+    linear-gradient(
+      rgba(0, 0, 0, 0.75), 
+      rgba(0, 0, 0, 0.9)
+    ), 
+    url('/newspaper-bg.webp') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+.header, .footer {
+  text-align: center;
+  padding: 2rem;
+}
+
+.header h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.header p {
+  font-size: 1.2rem;
+  color: #ffe;
+  margin-bottom: 1rem;
+}
+
+.footer p {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+/* Main Content Area */
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Aligns items at the bottom */
+  align-items: center;
+  padding: 0.5rem;
+  width: 100%;
+}
+
+/* Prompts Section Styling */
+.prompts {
+  width: 100%;
+  max-width: 500px;
+  margin-bottom: 1rem;
+}
+
+.label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  text-align: center;
+  white-space: nowrap; /* Ensure text stays on one line */
+}
+
+.labelText {
+  font-size: 1.5rem;
+  color: #bbb; /* Softer grey for better contrast */
+}
+
+/* Chatbox Styling */
+.chatbox {
+  width: 100%;
+  max-width: 1000px;
+  height: 70vh; /* Fixed height for the chatbox */
+  overflow-y: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  border-radius: 18px;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Chat Entry Styling */
+.chatEntry {
+  margin-bottom: 2rem;
+}
+
+.userMessage {
+  text-align: right;
+  margin-bottom: 1.2rem;
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1.1rem;
+  color: rgb(227, 229, 230);
+}
+
+.aiMessage {
+  text-align: left;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #d6bb9f;
+}
+
+.urlToggle {
+  margin-top: 0.5rem;
+}
+
+.urlList {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.urlList a {
+  color: #ff8c00; /* Bright orange for links */
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.urlList a:hover {
+  color: #ffa500; /* Lighter orange on hover */
+}
+
+.urlList a:active {
+  color: #ff8c00; /* Return to original color on active */
+}
+
+/* Form and Label Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 500px;
+}
+
+.inputWrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 8px;
+}
+
+.textarea {
+  width: 100%;
+  padding: 13px;
+  resize: none;
+  overflow: hidden;
+  font-size: 1rem;
+  min-height: 40px;
+  max-height: 200px;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  border-radius: 8px; /* Rounded corners */
+  border: 2px solid #333; /* White border for better visibility */
+  background-color: #333; /* Darker background */
+  color: #fff; /* White text */
+  outline: none; /* Remove default outline */
+  padding-right: 40px; /* Space for the button */
+  transition: border-color 0.3s;
+}
+
+.textarea:focus {
+  border-color: #ccc;
+}
+
+.submitButton {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #ccc; /* Gray color for the arrow */
+  font-size: 1.5rem; /* Adjust size as needed */
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s;
+}
+
+.submitButton:hover {
+  color: #fff; /* White color on hover */
+}
+
+.submitButton:active {
+  color: #ccc; /* Gray color on active */
+}
